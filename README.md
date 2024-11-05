@@ -17,4 +17,13 @@ Un CDN può essere una risorsa eccellente per ridurre il traffico su un sito web
 # WAF (Web Application Firewall)
 Un WAF si colloca tra la richiesta web e il server web; il suo scopo principale è proteggere il server web da attacchi di hacking o denial of service. Analizza le richieste web per verificare le tecniche di attacco più comuni e se la richiesta proviene da un browser reale piuttosto che da un bot. Inoltre, controlla se viene inviata una quantità eccessiva di richieste web utilizzando un sistema chiamato rate limiting, che consente solo un certo numero di richieste da un IP al secondo. Se una richiesta è considerata un potenziale attacco, viene eliminata e non viene mai inviata al server web.
 
+# How Web servers work
+# What is a Web Server?
+Un server web è un software che ascolta le connessioni in arrivo e utilizza il protocollo HTTP per consegnare contenuti web ai client. I server web più comuni sono Apache, Nginx, IIS e NodeJS. Un server web fornisce i file dalla sua directory radice, definita nelle impostazioni del software (es. /var/www/html su Linux per Nginx e Apache, o C:\inetpub\wwwroot su Windows per IIS).
 
+# Virtual Hosts
+I virtual host sono una funzione dei server web che permette a un singolo server di ospitare più di un sito web, anche se ognuno ha un dominio (nome) diverso. Questo è utile perché, anziché avere un server separato per ogni sito, un solo server può gestire tanti siti diversi.
+
+Gli host virtuali possono avere la loro directory principale mappata in posizioni diverse del disco rigido. Ad esempio, one.com è mappato su /var/www/sito_web_uno e two.com su /var/www/sito_web_due.
+
+Non c'è limite al numero di siti web diversi che si possono ospitare su un server web.
